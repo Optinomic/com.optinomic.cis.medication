@@ -1,0 +1,40 @@
+__opapp_include(../lib/html/optinomic/page/start.m4)
+<md-content>
+    <div>
+        <p class="md-subhead">Verordnung</p>
+        <div ng-if="d.medication.length > 0" ng-repeat="entry in d.medication">
+            <div ng-if="entry.medication_status === 0" layout="row" layout-xs="row" layout-gt-xs="row" layout-align="start start" style="margin-top:-24px;">
+                <div flex>
+                    <a target="_blank" ng-href="{{entry.url_compendium}}">
+                        <p class="flow-text"><span style="color:#9E9E9E">-&nbsp;</span> {{entry.medication_name}}</p>
+                    </a>
+                </div>
+                <div flex="35">
+                    <p class="flow-text">{{entry.medication_dosierung_mo}} <span style="color:#9E9E9E">-</span> {{entry.medication_dosierung_mi}} <span style="color:#9E9E9E">-</span> {{entry.medication_dosierung_ab}} <span style="color:#9E9E9E">-</span> {{entry.medication_dosierung_na}}</p>
+                </div>
+            </div>
+        </div>
+        <div ng-if="d.medication.length === 0">
+            <p class="flow-text">Keine Medikamente.</p>
+        </div>
+    </div>
+    <div style="margin-top: 24px;">
+        <p class="md-subhead">Reserve</p>
+        <div ng-if="d.medication_reserve.length > 0" ng-repeat="entry in d.medication_reserve">
+            <div layout="row" layout-xs="row" layout-gt-xs="row" layout-align="start start" style="margin-top:-24px;">
+                <div flex>
+                    <a target="_blank" ng-href="{{entry.url_compendium}}">
+                        <p class="flow-text"><span style="color:#9E9E9E">-&nbsp;</span> {{entry.medication_name}}</p>
+                    </a>
+                </div>
+                <div flex="35">
+                    <p class="flow-text">{{entry.medication_indikation}}</p>
+                </div>
+            </div>
+        </div>
+        <div ng-if="d.medication_reserve.length === 0">
+            <p class="flow-text">Keine Reserve.</p>
+        </div>
+    </div>
+</md-content>
+__opapp_include(../lib/html/optinomic/page/end.m4)

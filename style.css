@@ -1,0 +1,12 @@
+.medication-stop {
+    color: #1A237E !important;
+    background-color: #C5CAE9 !important;
+    border-top: 1px solid #3F51B5 !important;
+}
+
+.medication-verweigert {
+    color: #B71C1C !important;
+    background-color: #FFCDD2 !important;
+    border-top: 1px solid #F44336 !important;
+}
+
