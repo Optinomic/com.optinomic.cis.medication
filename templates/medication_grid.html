@@ -1,12 +1,12 @@
-__opapp_include(lib/html/optinomic/page/start.m4)
+__opapp_include(../lib/html/optinomic/page/start.m4)
 <h3 class="md-headline">Verordnung</h3>
 <div ng-if="d.appState === 'show'">
-    __opapp_include(templates/medication_table.html)
+    __opapp_include(../templates/medication_table.html)
 </div>
 <div ng-if="d.appState === 'edit'">
-    __opapp_include(templates/medication_edit.html)
+    __opapp_include(../templates/medication_edit.html)
 </div>
 <div ng-if="d.appState === 'new'">
-    __opapp_include(templates/medication_edit.html)
+    __opapp_include(../templates/medication_edit.html)
 </div>
-__opapp_include(lib/html/optinomic/page/end.m4)
+__opapp_include(../lib/html/optinomic/page/end.m4)
